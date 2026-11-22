@@ -1,0 +1,2 @@
+# Tested dependency; Python and FFmpeg/FFprobe are declared runtime prerequisites.
+numpy==2.4.6

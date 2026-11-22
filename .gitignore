@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# Local profiles, secrets & cache
+.env
+.env.*
+machine_profile.json
+user_profile.json
+music_catalog.json
+
+# Media & local test outputs
+*.mp4
+*.mov
+*.mkv
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.aac
+*.srt
+scan_report.json
+timeline_edit.json
+build_timeline_report.json
+操作指引与剪辑说明.md
+
+# Keep bundled example assets
+!assets/*.json
+
+# OS & editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

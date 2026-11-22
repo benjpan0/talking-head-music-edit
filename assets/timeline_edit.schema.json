@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "主时间线执行过渡文件（ADu / 剪映 / FFmpeg 通用）",
+  "type": "object",
+  "required": ["project", "assets", "tracks"],
+  "additionalProperties": false,
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["name", "width", "height", "fps"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "fps": { "type": "number", "minimum": 1 }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type", "path"],
+        "additionalProperties": false,
+        "properties": {
+          "type": { "enum": ["video", "audio", "image"] },
+          "path": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "tracks": {
+      "type": "object",
+      "required": ["video", "audio"],
+      "additionalProperties": false,
+      "properties": {
+        "video": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/clip" }
+        },
+        "audio": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/clip" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "clip": {
+      "type": "object",
+      "required": [
+        "id",
+        "track",
+        "asset",
+        "timeline_start",
+        "timeline_end",
+        "source_start",
+        "source_end"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[A-Za-z0-9_-]{1,64}$" },
+        "track": { "type": "integer", "minimum": 0 },
+        "asset": { "type": "string", "minLength": 1 },
+        "timeline_start": { "type": "number", "minimum": 0 },
+        "timeline_end": { "type": "number", "exclusiveMinimum": 0 },
+        "source_start": { "type": "number", "minimum": 0 },
+        "source_end": { "type": "number", "exclusiveMinimum": 0 },
+        "speed": { "type": "number", "exclusiveMinimum": 0, "default": 1 },
+        "volume": { "type": "number", "minimum": 0, "maximum": 4, "default": 1 },
+        "fade_in": { "type": "number", "minimum": 0, "default": 0 },
+        "fade_out": { "type": "number", "minimum": 0, "default": 0 }
+      }
+    }
+  }
+}

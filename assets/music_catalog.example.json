@@ -1,0 +1,27 @@
+{
+  "library_name": "我的常用配乐库",
+  "tracks": [
+    {
+      "id": "bgm_001",
+      "name": "轻快理性钢琴",
+      "audio_path": "audio/轻快理性钢琴.mp3",
+      "analysis_json": "analysis/轻快理性钢琴_剪辑数据.json",
+      "duration_sec": 148.5,
+      "bpm": 108,
+      "mood": ["轻快干货", "理性"],
+      "scenes": ["观点口播", "教程演示"],
+      "has_vocals": false,
+      "energy": "中",
+      "enabled": true,
+      "is_default": true,
+      "priority": 5,
+      "default_volume": 0.18,
+      "preview_segments": [
+        { "label": "前奏铺垫", "range": "0:00-0:18" },
+        { "label": "主段推进", "range": "0:32-1:04" },
+        { "label": "收尾", "range": "2:10-2:28" }
+      ],
+      "notes": "钢琴干净不抢人声，1:04 处有自然气口适合转折停顿"
+    }
+  ]
+}

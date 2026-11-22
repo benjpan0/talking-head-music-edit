@@ -1,0 +1,76 @@
+{
+  "project": {
+    "name": "口播配乐示例_成片",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "assets": {
+    "v1": {
+      "type": "video",
+      "path": "media/口播原片.mp4"
+    },
+    "a1": {
+      "type": "audio",
+      "path": "media/背景音乐.mp3"
+    }
+  },
+  "tracks": {
+    "video": [
+      {
+        "id": "V01",
+        "track": 0,
+        "asset": "v1",
+        "timeline_start": 0,
+        "timeline_end": 5.2,
+        "source_start": 0,
+        "source_end": 5.2,
+        "speed": 1,
+        "volume": 1,
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "id": "V02",
+        "track": 0,
+        "asset": "v1",
+        "timeline_start": 5.2,
+        "timeline_end": 9.37,
+        "source_start": 11.32,
+        "source_end": 15.49,
+        "speed": 1,
+        "volume": 1,
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "audio": [
+      {
+        "id": "A01",
+        "track": 0,
+        "asset": "a1",
+        "timeline_start": 4.0,
+        "timeline_end": 15.0,
+        "source_start": 12.5,
+        "source_end": 23.5,
+        "speed": 1,
+        "volume": 0.18,
+        "fade_in": 0.8,
+        "fade_out": 1.0
+      },
+      {
+        "id": "A02",
+        "track": 1,
+        "asset": "a1",
+        "timeline_start": 14.0,
+        "timeline_end": 28.0,
+        "source_start": 56.0,
+        "source_end": 70.0,
+        "speed": 1,
+        "volume": 0.18,
+        "fade_in": 1.0,
+        "fade_out": 1.2
+      }
+    ]
+  }
+}

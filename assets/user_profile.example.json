@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "editor_target": "jianying",
+  "jianying": {
+    "exe_path": "",
+    "drafts_root": "C:/Users/你的用户名/AppData/Local/JianyingPro/User Data/Projects/com.lveditor.draft",
+    "root_meta_path": "C:/Users/你的用户名/AppData/Local/JianyingPro/User Data/Projects/com.lveditor.draft/root_meta_info.json"
+  },
+  "asr": {
+    "default_backend": "faster-whisper",
+    "faster_whisper_model": "small",
+    "qwen3_asr_dir": null,
+    "whisper_download_mode": "manual"
+  },
+  "adudir": {
+    "default_mep_dir": null
+  },
+  "music_library": {
+    "root_dir": "<你的音乐库目录>",
+    "catalog_file": "music_catalog.json"
+  },
+  "speech_edit": {
+    "default_style": "balanced",
+    "speech_volume": 1.0,
+    "music_volume": 0.18,
+    "ffmpeg_burn_subtitles": false
+  },
+  "glossary": {
+    "terms": [
+      "阿杜导演",
+      "剪映专业版"
+    ],
+    "replacements": {
+      "记录着": "记录者"
+    }
+  },
+  "speaker_profile": {
+    "typical_wpm": 205,
+    "normal_pause_sec": 0.55,
+    "emphasis_pause_sec": 0.85
+  },
+  "presets_by_type": {
+    "知识观点": {
+      "speech_style": "balanced",
+      "default_speed": 1.0,
+      "speech_volume": 1.0,
+      "music_mood": ["理性", "平静思考"],
+      "music_volume": 0.18,
+      "delivery": "jianying",
+      "ffmpeg_burn_subtitles": false,
+      "auto_confirm": true
+    },
+    "干货教程": {
+      "speech_style": "compact",
+      "default_speed": 1.1,
+      "speech_volume": 1.1,
+      "music_mood": ["轻快干货"],
+      "music_volume": 0.16,
+      "delivery": "jianying",
+      "ffmpeg_burn_subtitles": false,
+      "auto_confirm": true
+    },
+    "故事聊天": {
+      "speech_style": "natural",
+      "default_speed": 1.0,
+      "speech_volume": 1.0,
+      "music_mood": ["温暖治愈"],
+      "music_volume": 0.2,
+      "delivery": "jianying",
+      "ffmpeg_burn_subtitles": false,
+      "auto_confirm": false
+    }
+  }
+}
